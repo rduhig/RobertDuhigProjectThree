@@ -1,4 +1,91 @@
 /* ~~~~~~~~~~~~~~~~~~~~ SETUP ~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~ */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Neucha", cursive;
+}
+
+h1 {
+  font-size: 4rem;
+  text-shadow: -2px -2px 0 #2c2c2c, 2px -2px 0 #2c2c2c, -2px 2px 0 #2c2c2c, 2px 2px 0 #2c2c2c;
+  color: #fafafa;
+}
+
+a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fafafa;
+  letter-spacing: 1px;
+}
+
+a:hover, a:active, a:focus {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~ SHARED STYLES ~~~~~~~~~~~~~~~~~~~~ */
+body {
+  background-color: #fafafa;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~ */
+header {
+  height: clamp(360px, calc(360px + (500 - 360) * (100vw - 850px) / (1280 - 850)), 500px);
+  background: linear-gradient(230deg, transparent calc(60% - 1px), #41a241 calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
+  background-size: auto, cover;
+  position: relative;
+}
+
+.logo {
+  width: 400px;
+  position: absolute;
+  bottom: clamp(30px, calc(30px + (90 - 30) * (100vw - 850px) / (1280 - 850)), 90px);
+  left: clamp(30px, calc(30px + (90 - 30) * (100vw - 850px) / (1280 - 850)), 90px);
+}
+
+.logo h1 {
+  line-height: 0.9;
+  display: inline;
+}
+
+.logo i {
+  float: left;
+  font-size: 7rem;
+  color: #41a241;
+  text-shadow: -2px -2px 0 #2c2c2c, 2px -2px 0 #2c2c2c, -2px 2px 0 #2c2c2c, 2px 2px 0 #2c2c2c;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 2.5rem;
+}
+
+.logo span::before {
+  content: "\A";
+  white-space: pre;
+}
+
+nav {
+  width: 55%;
+  background-color: #41a241;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: clamp(20px, calc(20px + (60 - 20) * (100vw - 850px) / (1280 - 850)), 60px);
+}

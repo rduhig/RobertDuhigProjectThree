@@ -1,8 +1,11 @@
-$baseFont: "";
-$headerFont: "Neuche", sans-serif;
-$backgroundColor: "";
-$textColor: "";
-$highlightColor: "";
+$baseFont: "Open Sans", sans-serif;
+$headerFont: "Neucha", cursive;
+$backgroundColor: #fafafa;
+$textColor: #2c2c2c;
+$highlightColor: #41a241;
+$maxWidth: 1280;
+$tabletBreakpoint: 850;
+$mobileBreakpoint: 450;
 
 @import "mixins";
 @import "setup";
@@ -10,4 +13,64 @@ $highlightColor: "";
 
 /* ~~~~~~~~~~~~~~~~~~~~ SHARED STYLES ~~~~~~~~~~~~~~~~~~~~ */
 
+body {
+    background-color: $backgroundColor;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: #{$maxWidth}px;
+    margin: 0 auto;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+    @include scaleSize("height", 500, 360, $maxWidth, $tabletBreakpoint);
+    background: linear-gradient(230deg, transparent calc(60% - 1px), $highlightColor calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
+    background-size: auto, cover;
+    position: relative;
+}
+
+.logo {
+    width: 400px;
+    position: absolute;
+    @include scaleSize("bottom", 90, 30, $maxWidth, $tabletBreakpoint);
+    @include scaleSize("left", 90, 30, $maxWidth, $tabletBreakpoint);
+
+    h1 {
+        line-height: 0.9;
+        display: inline;
+    }
+
+    i {
+        float: left;
+        font-size: 7rem;
+        color: $highlightColor;
+        @include textOutline(2, $textColor);
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 2.5rem;
+
+        &::before {
+            content: "\A";
+            white-space: pre;
+        }
+    }
+}
+
+nav {
+    width: 55%;
+    background-color: $highlightColor;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+
+    li {
+        display: inline-block;
+        @include scaleSize("margin-right", 60, 20, $maxWidth, $tabletBreakpoint);
+    }
+}

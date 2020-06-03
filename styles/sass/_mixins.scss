@@ -1,7 +1,7 @@
-@mixin scale-size($property, $largest, $smallest, $maxWidth, $minWidth) {
+@mixin scaleSize($property, $largest, $smallest, $maxWidth, $minWidth) {
     #{$property}: clamp(#{$smallest}px, calc(#{$smallest}px + (#{$largest} - #{$smallest}) * (100vw - #{$minWidth}px) / (#{$maxWidth} - #{$minWidth})), #{$largest}px);
 }
 
-@mixin text-outline($width, $color) {
+@mixin textOutline($width, $color) {
     text-shadow: -#{$width}px -#{$width}px 0 $color, #{$width}px -#{$width}px 0 $color, -#{$width}px #{$width}px 0 $color, #{$width}px #{$width}px 0 $color;
 }

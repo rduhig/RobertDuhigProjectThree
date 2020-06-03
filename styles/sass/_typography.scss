@@ -1,1 +1,29 @@
 /* ~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    font-family: $baseFont;
+}
+
+h1, h2 {
+    font-family: $headerFont;
+}
+
+h1 {
+    font-size: 4rem;
+    @include textOutline(2, $textColor);
+    color: $backgroundColor;
+}
+
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $backgroundColor;
+    letter-spacing: 1px;
+
+    &:hover, &:active, &:focus {
+        color: white;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-position: under;
+    }
+}
