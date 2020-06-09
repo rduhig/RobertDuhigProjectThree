@@ -34,15 +34,15 @@ app.displayPlants = () => {
                 <label for="${plantID}">
                     <img src="${plant.img}" alt="${plant.name}">
                     <div class="details">
-                    <div class="flexContainer">
-                    <span>${plant.name}</span>
-                    <span class="binomialName">${plant.binomialName}</span>
-                    <span>${plant.type}</span>
-                    <span>${plant.lifespan}</span>
-                    <span>${plant.height}</span>
-                    <span>${plant.bloom}</span>
-                    <span class="color">${plant.color}</span>
-                    </div>
+                        <div class="flexContainer">
+                            <span>${plant.name}</span>
+                            <span class="binomialName">${plant.binomialName}</span>
+                            <span>${plant.type}</span>
+                            <span>${plant.lifespan}</span>
+                            <span>${plant.height}</span>
+                            <span>${plant.bloom}</span>
+                            <span class="color">${plant.color}</span>
+                        </div>
                     </div>
                 </label>
             </li>
@@ -55,14 +55,14 @@ app.displayGarden = (plantNames) => {
     app.chosenPlants.forEach(plant => {
         $(".gardenBox ul").append(`
             <li class="gardenPlant">
-                <img src="${plant.img}" alt="${plant.name}>
+                <img src="${plant.img}" alt="${plant.name}">
                 <span>${plant.name}</span>
             </li>
         `);
-
-        $(".step3 button[type=submit]").prop("disabled", true);
-        $(".garden").removeClass("hidden");
     });
+
+    $(".step3 button[type=submit]").prop("disabled", true);
+    $(".garden").toggleClass("hidden");
 };
 
 app.selectLightExposure = light => {
