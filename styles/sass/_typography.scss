@@ -5,10 +5,12 @@ body {
     font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 1px;
+    color: $textColor;
 }
 
 h1, h2 {
     font-family: $headerFont;
+    font-weight: bold;
 }
 
 h1 {
@@ -25,6 +27,7 @@ h2 {
 h3 {
     font-family: $baseFont;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 a {

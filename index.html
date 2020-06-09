@@ -31,33 +31,27 @@
                 <p><span>Back to Roots</span> will help you design your very own native plant garden. Our pollinators have been in severe decline in recent years and it's on all of us to create a healthy environment for all life to thrive. Choosing native plants for your garden will ensure that your local pollinators have a habitat they are specially adapted for and grant us all a better future.</p>
             </section>
             <section class="plants">
-                <div class="step1">
+                <div class="step1 selected">
                     <h2>Step One: Your Garden</h2>
                     <h3>Tell us about your garden. How much exposure does your garden have to sunlight?</h3>
-                    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos earum nemo, obcaecati ipsum ad beatae, quidem voluptas dolorum odio explicabo consequatur dolorem officia nihil facere maxime minima distinctio neque necessitatibus laboriosam non voluptatibus quam. Necessitatibus, excepturi fuga beatae adipisci architecto blanditiis ipsa. Saepe, vero?</p> -->
                     <form class="sunExposure">
-                        <!-- <fieldset> -->
-                            <!-- <legend>Sun Exposure</legend> -->
                         <label for="shade">
                             Shade
-                            <input type="radio" value="Shade" id="shade" name="sunExposure">
+                            <input type="radio" value="shade" id="shade" name="sunExposure">
                         </label>
                         <label for="partial">
                             Partial
-                            <input type="radio" value="Partial" id="partial" name="sunExposure">
+                            <input type="radio" value="partial" id="partial" name="sunExposure">
                         </label>
                         <label for="full">
                             Full
-                            <input type="radio" value="Full" id="full" name="sunExposure">
+                            <input type="radio" value="full" id="full" name="sunExposure">
                         </label>
                         <button type="submit">Next Step</button>
-                        <!-- </fieldset> -->
                     </form>
                 </div>
-                <div class="step2">
+                <div class="step2 hidden">
                     <h2>Step Two: Add Some Filters</h2>
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, eos sunt sed aperiam tempora repudiandae labore iste commodi rerum facilis voluptas ut explicabo expedita hic eum ratione obcaecati alias vel enim dolorum aspernatur quisquam? Placeat vitae cumque, nisi animi maxime quas tempora veritatis ducimus corporis architecto distinctio tempore dicta soluta pariatur voluptates repudiandae impedit cum voluptate. Culpa sapiente ea consequuntur?</p> -->
-                    <!-- type, age, height, bloom, color -->
                     <h3>What sort of plants are you looking for?</h3>
                     <form class="filters">
                         <label for="type">Plant Type</label>
@@ -77,75 +71,82 @@
                         <label for="bloom">Bloom Period</label>
                         <select id="bloom">
                             <option value="" disabled selected>Select one...</option>
-                            <option value="ESp">Early Spring</option>
-                            <option value="Sp">Mid Spring</option>
-                            <option value="LSp">Late Spring</option>
-                            <option value="ESu">Early Summer</option>
-                            <option value="Su">Mid Summer</option>
-                            <option value="LSu">Late Summer</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
                         </select>
                         <label for="color">Flower Color</label>
                         <select id="color">
                             <option value="" disabled selected>Select one...</option>
-                            <option value="white">White</option>
-                            <option value="yellow">Yellow</option>
-                            <option value="green">Green</option>
-                            <option value="red">Red</option>
-                            <option value="orange">Orange</option>
-                            <option value="purple">Purple</option>
+                            <option value="White">White</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Purple">Purple</option>
+                            <option value="Pink">Pink</option>
                         </select>
                         <button type="submit">Next Step</button>
                     </form>
                 </div>
-                <div class="step3 selected">
+                <div class="step3 hidden">
                     <h2>Step Three: Choose Your Plants!</h2>
                     <form class="filteredPlants">
                         <ul>
-                            <li>
-                                <input type="checkbox" id="tempPlant1">
-                                <label for="tempPlant1">
-                                    <img src="https://source.unsplash.com/random/50x50">
-                                    <span>Temp Plant</span>
-                                    <span class="binomialName">Tempinus Plantinus</span>
-                                    <span>Tree</span>
-                                    <span>Perennial</span>
-                                    <span>30 feet</span>
-                                    <span>Early Summer</span>
-                                    <span class="color">Yellow</span>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="tempPlant2">
-                                <label for="tempPlant2">
-                                    <img src="https://source.unsplash.com/random/50x50">
-                                    <span>Temp Plant</span>
-                                    <span class="binomialName">Tempinus Plantinus</span>
-                                    <span>Tree</span>
-                                    <span>Perennial</span>
-                                    <span>30 feet</span>
-                                    <span>Early Summer</span>
-                                    <span class="color">Yellow</span>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="tempPlant3">
-                                <label for="tempPlant3">
-                                    <img src="https://source.unsplash.com/random/50x50">
-                                    <span>Temp Plant</span>
-                                    <span class="binomialName">Tempinus Plantinus</span>
-                                    <span>Tree</span>
-                                    <span>Perennial</span>
-                                    <span>30 feet</span>
-                                    <span>Early Summer</span>
-                                    <span class="color">Yellow</span>
-                                </label>
-                            </li>
+                            <!-- Filtered plants will be added here -->
                         </ul>
+                        <button type="submit">Add Plants</button>
+                        <button type="reset">Start Over</button>
                     </form>
                 </div>
             </section>
             <section class="garden">
                 <h2>My Garden</h2>
+                <div class="gardenBox">
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                    <div class="gardenPlant">
+                        <img src="https://source.unsplash.com/random/100x100">
+                        <span>Chosen Plant</span>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
