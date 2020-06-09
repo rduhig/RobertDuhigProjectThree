@@ -1,24 +1,24 @@
 const app = {};
 
 app.plants = [
-    {name: "Hoptree", binomialName: "Ptelea trifoliata", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "20 feet", bloom: "Late Spring", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Pipevine", binomialName: "Aristolochia macrophylla", sun: ["partial", "full"], type: "Vine", lifespan: "Perennial", height: "30 feet", bloom: "Late Spring", color: "Purple", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Pawpaw", binomialName: "Asimina triloba", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "25 feet", bloom: "", color: "", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Spicebush", binomialName: "Lindera benzoin", sun: ["partial", "full"], type: "Shrub", lifespan: "Perennial", height: "12 feet", bloom: "Early Spring", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Sweet Crabapple", binomialName: "Malus coronaria", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "30 feet", bloom: "Late Spring", color: "Pink", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Tuliptree", binomialName: "Liriodendron tulipifera", sun: ["full"], type: "Tree", lifespan: "P", height: "100 feet", bloom: "Early Summer", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Black Cherry", binomialName: "Prunus serotina", sun: ["full"], type: "Tree", lifespan: "Perennial", height: "80 feet", bloom: "Summer", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Pussy Willow", binomialName: "Salix discolor", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "20 feet", bloom: "Early Spring", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Aniseroot", binomialName: "Osmorhiza longistylis", sun: ["shade", "partial"], type: "Herb", lifespan: "Short-lived Perennial", height: "2 feet", bloom: "Early Summer", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Golden Alexander", binomialName: "Zizia aurea", sun: ["partial", "full"], type: "Herb", lifespan: "Short-lived Perennial", height: "2 feet", bloom: "Late Spring", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Great Angelica", binomialName: "Angelica atropurpurea", sun: ["partial", "full"], type: "Herb", lifespan: "Biennial", height: "6 feet", bloom: "Late Spring", color: "Green", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Anise", binomialName: "Pimpinella anisum", sun: ["full"], type: "Herb", lifespan: "Annual", height: "3 feet", bloom: "Summer", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Caraway", binomialName: "Carum carvi", sun: ["full"], type: "Herb", lifespan: "Biennial", height: "2 feet", bloom: "Early Summer", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Coriander", binomialName: "Coriandrum sativum", sun: ["partial", "full"], type: "Herb", lifespan: "Annual", height: "2 feet", bloom: "Summer", color: "White", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Dill", binomialName: "Anethum graveolens", sun: ["full"], type: "Herb", lifespan: "Annual", height: "2 feet", bloom: "Summer", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Fennel", binomialName: "Foeniculum vulgare", sun: ["full"], type: "Herb", lifespan: "Perennial", height: "8 feet", bloom: "Late Summer", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Lovage", binomialName: "Levisticum officinale", sun: ["partial", "full"], type: "Herb", lifespan: "Perennial", height: "6 feet", bloom: "Late Spring", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
-    {name: "Parsley", binomialName: "Petroselinum crispum", sun: ["full"], type: "Herb", lifespan: "Biennial", height: "2 feet", bloom: "Summer", color: "Yellow", img: "https://source.unsplash.com/random/100x100"},
+    {name: "Hoptree", binomialName: "Ptelea trifoliata", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "20 feet", bloom: "Late Spring", color: "White", img: "./assets/plants/hoptree.jpg"},
+    {name: "Pipevine", binomialName: "Aristolochia macrophylla", sun: ["partial", "full"], type: "Vine", lifespan: "Perennial", height: "30 feet", bloom: "Late Spring", color: "Purple", img: "./assets/plants/pipevine.jpg"},
+    {name: "Pawpaw", binomialName: "Asimina triloba", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "25 feet", bloom: "", color: "", img: "./assets/plants/pawpaw.jpg"},
+    {name: "Spicebush", binomialName: "Lindera benzoin", sun: ["partial", "full"], type: "Shrub", lifespan: "Perennial", height: "12 feet", bloom: "Early Spring", color: "Yellow", img: "./assets/plants/spicebush.jpg"},
+    {name: "Sweet Crabapple", binomialName: "Malus coronaria", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "30 feet", bloom: "Late Spring", color: "Pink", img: "./assets/plants/sweetCrabapple.jpg"},
+    {name: "Tuliptree", binomialName: "Liriodendron tulipifera", sun: ["full"], type: "Tree", lifespan: "Perennial", height: "100 feet", bloom: "Early Summer", color: "Yellow", img: "./assets/plants/tuliptree.jpg"},
+    {name: "Black Cherry", binomialName: "Prunus serotina", sun: ["full"], type: "Tree", lifespan: "Perennial", height: "80 feet", bloom: "Summer", color: "White", img: "./assets/plants/blackCherry.jpg"},
+    {name: "Pussy Willow", binomialName: "Salix discolor", sun: ["partial", "full"], type: "Tree", lifespan: "Perennial", height: "20 feet", bloom: "Early Spring", color: "White", img: "./assets/plants/pussyWillow.jpg"},
+    {name: "Aniseroot", binomialName: "Osmorhiza longistylis", sun: ["shade", "partial"], type: "Herb", lifespan: "Short-lived Perennial", height: "2 feet", bloom: "Early Summer", color: "White", img: "./assets/plants/aniseroot.jpg"},
+    {name: "Golden Alexander", binomialName: "Zizia aurea", sun: ["partial", "full"], type: "Herb", lifespan: "Short-lived Perennial", height: "2 feet", bloom: "Late Spring", color: "Yellow", img: "./assets/plants/goldenAlexander.jpg"},
+    {name: "Great Angelica", binomialName: "Angelica atropurpurea", sun: ["partial", "full"], type: "Herb", lifespan: "Biennial", height: "6 feet", bloom: "Late Spring", color: "Green", img: "./assets/plants/greatAngelica.jpg"},
+    {name: "Anise", binomialName: "Pimpinella anisum", sun: ["full"], type: "Herb", lifespan: "Annual", height: "3 feet", bloom: "Summer", color: "White", img: "./assets/plants/anise.jpg"},
+    {name: "Caraway", binomialName: "Carum carvi", sun: ["full"], type: "Herb", lifespan: "Biennial", height: "2 feet", bloom: "Early Summer", color: "White", img: "./assets/plants/caraway.jpg"},
+    {name: "Coriander", binomialName: "Coriandrum sativum", sun: ["partial", "full"], type: "Herb", lifespan: "Annual", height: "2 feet", bloom: "Summer", color: "White", img: "./assets/plants/coriander.jpg"},
+    {name: "Dill", binomialName: "Anethum graveolens", sun: ["full"], type: "Herb", lifespan: "Annual", height: "2 feet", bloom: "Summer", color: "Yellow", img: "./assets/plants/dill.jpg"},
+    {name: "Fennel", binomialName: "Foeniculum vulgare", sun: ["full"], type: "Herb", lifespan: "Perennial", height: "8 feet", bloom: "Late Summer", color: "Yellow", img: "./assets/plants/fennel.jpg"},
+    {name: "Lovage", binomialName: "Levisticum officinale", sun: ["partial", "full"], type: "Herb", lifespan: "Perennial", height: "6 feet", bloom: "Late Spring", color: "Yellow", img: "./assets/plants/lovage.jpg"},
+    {name: "Parsley", binomialName: "Petroselinum crispum", sun: ["full"], type: "Herb", lifespan: "Biennial", height: "2 feet", bloom: "Summer", color: "Yellow", img: "./assets/plants/parsley.jpg"},
 ];
 
 app.filteredPlants = [];
@@ -32,7 +32,7 @@ app.displayPlants = () => {
             <li>
                 <input type="checkbox" id="${plantID}">
                 <label for="${plantID}">
-                    <img src="https://source.unsplash.com/random/50x50">
+                    <img src="${plant.img}" alt="${plant.name}">
                     <div class="details">
                     <div class="flexContainer">
                     <span>${plant.name}</span>
@@ -53,13 +53,10 @@ app.displayPlants = () => {
 app.displayGarden = (plantNames) => {
     app.chosenPlants = app.filteredPlants.filter(plant => plantNames.includes(plant.name.toLowerCase().replace(/\s/g, "")));
     app.chosenPlants.forEach(plant => {
-        const plantName = plant.name;
-        const plantImage = plant.img;
-
         $(".gardenBox ul").append(`
             <li class="gardenPlant">
-                <img src="${plantImage}">
-                <span>${plantName}</span>
+                <img src="${plant.img}" alt="${plant.name}>
+                <span>${plant.name}</span>
             </li>
         `);
 

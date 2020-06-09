@@ -59,7 +59,7 @@ body {
 
 header {
     @include scaleSize("height", 500, 360, $maxWidth, $tabletBreakpoint);
-    background: linear-gradient(230deg, transparent calc(60% - 1px), $headerColor calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
+    background: linear-gradient(230deg, transparent calc(60% - 1px), $headerColor calc(60% + 1px)), url("../assets/header.jpg") no-repeat right top;
     background-size: auto, cover;
     position: relative;
 }

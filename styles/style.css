@@ -309,7 +309,7 @@ body {
 
 header {
   height: clamp(360px, calc(360px + (500 - 360) * (100vw - 850px) / (1280 - 850)), 500px);
-  background: linear-gradient(230deg, transparent calc(60% - 1px), #0C8346 calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
+  background: linear-gradient(230deg, transparent calc(60% - 1px), #0C8346 calc(60% + 1px)), url("../assets/header.jpg") no-repeat right top;
   background-size: auto, cover;
   position: relative;
 }
