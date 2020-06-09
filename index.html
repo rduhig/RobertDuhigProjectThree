@@ -16,13 +16,6 @@
                 <i class="fas fa-seedling"></i>
                 <h1>Back <span>to</span> Roots</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">My Garden</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
             <section class="about clearfix">
@@ -57,16 +50,17 @@
                         <label for="type">Plant Type</label>
                         <select id="type">
                             <option value="" disabled selected>Select one...</option>
-                            <option value="herb">Herb</option>
-                            <option value="flower">Flower</option>
-                            <option value="tree">Tree</option>
+                            <option value="Herb">Herb</option>
+                            <option value="Flower">Flower</option>
+                            <option value="Tree">Tree</option>
                         </select>
                         <label for="lifespan">Lifespan</label>
                         <select id="lifespan">
                             <option value="" disabled selected>Select one...</option>
-                            <option value="annual">Annual</option>
-                            <option value="biennial">Biennial</option>
-                            <option value="perennial">Perennial</option>
+                            <option value="Annual">Annual</option>
+                            <option value="Biennial">Biennial</option>
+                            <option value="Short-lived Perennial">Short-lived Perennial</option>
+                            <option value="Perennial">Perennial</option>
                         </select>
                         <label for="bloom">Bloom Period</label>
                         <select id="bloom">
@@ -80,10 +74,8 @@
                             <option value="White">White</option>
                             <option value="Yellow">Yellow</option>
                             <option value="Green">Green</option>
-                            <option value="Red">Red</option>
-                            <option value="Orange">Orange</option>
-                            <option value="Purple">Purple</option>
                             <option value="Pink">Pink</option>
+                            <option value="Purple">Purple</option>
                         </select>
                         <button type="submit">Next Step</button>
                     </form>
@@ -99,53 +91,12 @@
                     </form>
                 </div>
             </section>
-            <section class="garden">
+            <section class="garden hidden">
                 <h2>My Garden</h2>
                 <div class="gardenBox">
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
-                    <div class="gardenPlant">
-                        <img src="https://source.unsplash.com/random/100x100">
-                        <span>Chosen Plant</span>
-                    </div>
+                    <ul>
+                        <!-- Chosen plants will be added here -->
+                    </ul>
                 </div>
             </section>
         </main>

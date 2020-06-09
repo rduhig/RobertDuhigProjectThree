@@ -21,7 +21,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    color: #009B72;
+    color: $highlightColor;
 }
 
 h3 {
@@ -49,4 +49,8 @@ p {
 
 button, select {
     font-size: 1.2rem;
+}
+
+.binomialName {
+    font-style: italic;
 }

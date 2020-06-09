@@ -1,10 +1,10 @@
 $baseFont: "Source Sans Pro", sans-serif;
 $headerFont: "Neucha", cursive;
-$backgroundColor: #fafafa;
-// $textColor: #2c2c2c;
+$backgroundColor: #FAFAFA;
 $textColor: #34344A;
-// $highlightColor: #41a241;
-$highlightColor: #0C8346;
+$headerColor: #0C8346;
+$highlightColor: #009B72;
+$shadowColor: #FFFD82;
 $maxWidth: 1280;
 $tabletBreakpoint: 850;
 $mobileBreakpoint: 450;
@@ -13,11 +13,39 @@ $mobileBreakpoint: 450;
 @import "setup";
 @import "typography";
 
-/* ~~~~~~~~~~~~~~~~~~~~ SHARED STYLES ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~ */
 
-// html {
-//     font-size: 16px;
-// }
+h1, h2, h3 {
+    margin: 25px 0;
+}
+
+ul {
+    margin: 15px 0;
+}
+
+button {
+    width: 200px;
+    background-color: $highlightColor;
+    color: $backgroundColor;
+    border: 1px solid $highlightColor;
+    padding: 5px 0;
+    margin-top: 20px;
+    cursor: pointer;
+
+    &:hover, &:focus, &:active {
+        border-color: $textColor;
+    }
+
+    &:disabled {
+        background-color: desaturate($highlightColor, 80%);
+        color: darken($backgroundColor, 50%);
+        border-color: transparent;
+    }
+}
+
+.hidden {
+    display: none;
+}
 
 body {
     background-color: $backgroundColor;
@@ -29,19 +57,9 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
-    margin: 25px 0;
-}
-
-ul {
-    margin: 15px 0;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~ */
-
 header {
     @include scaleSize("height", 500, 360, $maxWidth, $tabletBreakpoint);
-    background: linear-gradient(230deg, transparent calc(60% - 1px), $highlightColor calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
+    background: linear-gradient(230deg, transparent calc(60% - 1px), $headerColor calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
     background-size: auto, cover;
     position: relative;
 }
@@ -75,33 +93,23 @@ header {
     }
 }
 
-nav {
-    width: 55%;
-    background-color: $highlightColor;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    text-align: right;
-
-    li {
-        display: inline-block;
-        @include scaleSize("margin-right", 60, 20, $maxWidth, $tabletBreakpoint);
-    }
-}
-
 .about {
     position: relative;
-    padding: 60px;
+    padding: 60px 60px 30px;
 
     img {
         float: right;
         height: 150px;
         margin-left: 60px;
-        box-shadow: 20px 20px #FFFD82;
+        box-shadow: 20px 20px $shadowColor;
     }
 
     span {
         font-weight: 600;
+    }
+
+    @media (max-width: #{$tabletBreakpoint}px) {
+        padding: 30px;
     }
 }
 
@@ -111,28 +119,29 @@ nav {
     align-items: stretch;
     padding: 30px;
     height: 100%;
+
+    @media (max-width: #{$tabletBreakpoint}px) {
+        padding: 30px 10px;
+    }
 }
 
 .step1, .step2, .step3 {
-    // height: 100%;
-    // width: 50%;
     padding: 0 30px;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     border-radius: 50px;
 
     &.selected {
-        border-color: #009B72;
-    }
-
-    &.hidden {
-        display: none;
+        border-color: $highlightColor;
     }
 }
 
 .step1, .step2 {
-    // flex: 1 0 calc(50% - 68px);
     width: 50%;
+
+    @media (max-width: #{$tabletBreakpoint}px) {
+        width: 100%;
+    }
 }
 
 .step3 {
@@ -144,7 +153,6 @@ nav {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px 40px;
-    // border: none;
 
     label {
         flex: 1 0 33%;
@@ -174,8 +182,6 @@ nav {
 }
 
 .filteredPlants {
-    // display: flex;
-    // flex-wrap: wrap;
     padding: 20px;
     text-align: center;
 
@@ -197,70 +203,70 @@ nav {
     label {
         flex: 1 0 calc(100% - 50px);
         display: flex;
-        // grid-template-columns: 70px 2fr 3fr 1fr 1fr 1fr 2fr 1fr;
         justify-content: space-between;
         align-items: center;
         padding-left: 20px;
-        // margin-bottom: 10px;
 
         > img {
             width: 70px;
+        }
+
+        .details {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .flexContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
         }
     }
 
     button:first-of-type {
         margin-right: 20px;
     }
-}
 
-.binomialName {
-    font-style: italic;
+    @media (max-width: #{$tabletBreakpoint}px) {
+        padding: 20px 0;
+    }
 }
 
 .garden {
-    padding: 60px;
+    padding: 30px 60px 60px;
+
+    @media (max-width: #{$tabletBreakpoint}px) {
+        padding: 30px 10px;
+    }
 }
 
 .gardenBox {
     display: flex;
     flex-wrap: wrap;
-    border: 3px solid #009B72;
-    padding: 20px;
+    justify-content: center;
+    border: 4px solid $highlightColor;
+    padding: 5px 20px;
 }
 
 .gardenPlant {
+    display: inline-block;
     margin: 10px;
+    text-align: center;
 
     img {
         display: block;
         width: 100px;
-        margin: 0 auto;
-    }
-}
-
-button {
-    width: 200px;
-    background-color: #009B72;
-    color: $backgroundColor;
-    border: 1px solid #009B72;
-    padding: 5px 0;
-    margin-top: 20px;
-    cursor: pointer;
-
-    &:hover, &:focus, &:active {
-        border-color: $textColor;
+        margin: 0 auto 10px;
     }
 
-    &:disabled {
-        // display: none;
-        background-color: desaturate(#009B72, 80%);
-        color: darken($backgroundColor, 50%);
-        border-color: transparent;
+    span {
+        font-weight: bold;
     }
 }
 
 footer {
-    background-color: $highlightColor;
+    background-color: $headerColor;
     color: $backgroundColor;
     padding: 1px;
     text-align: center;
