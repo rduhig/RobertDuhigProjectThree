@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/favicon.png" rel="icon">
-    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans&family=Roboto:wght@300;500&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet"> 
     <link href="./styles/style.css" rel="stylesheet">
     <title>Plant Local</title>
     <script src="https://kit.fontawesome.com/7b918aa7b2.js" crossorigin="anonymous"></script>
@@ -24,6 +24,133 @@
                 </ul>
             </nav>
         </header>
+        <main>
+            <section class="about clearfix">
+                <h2>Welcome</h2>
+                <img src="./assets/brown-and-black-butterfly-perched-on-yellow-and-red-petaled-633437.jpg" alt="A Monarch butterfly is perched on top of a flower to gather nectar.">
+                <p><span>Back to Roots</span> will help you design your very own native plant garden. Our pollinators have been in severe decline in recent years and it's on all of us to create a healthy environment for all life to thrive. Choosing native plants for your garden will ensure that your local pollinators have a habitat they are specially adapted for and grant us all a better future.</p>
+            </section>
+            <section class="plants">
+                <div class="step1">
+                    <h2>Step One: Your Garden</h2>
+                    <h3>Tell us about your garden. How much exposure does your garden have to sunlight?</h3>
+                    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos earum nemo, obcaecati ipsum ad beatae, quidem voluptas dolorum odio explicabo consequatur dolorem officia nihil facere maxime minima distinctio neque necessitatibus laboriosam non voluptatibus quam. Necessitatibus, excepturi fuga beatae adipisci architecto blanditiis ipsa. Saepe, vero?</p> -->
+                    <form class="sunExposure">
+                        <!-- <fieldset> -->
+                            <!-- <legend>Sun Exposure</legend> -->
+                        <label for="shade">
+                            Shade
+                            <input type="radio" value="Shade" id="shade" name="sunExposure">
+                        </label>
+                        <label for="partial">
+                            Partial
+                            <input type="radio" value="Partial" id="partial" name="sunExposure">
+                        </label>
+                        <label for="full">
+                            Full
+                            <input type="radio" value="Full" id="full" name="sunExposure">
+                        </label>
+                        <button type="submit">Next Step</button>
+                        <!-- </fieldset> -->
+                    </form>
+                </div>
+                <div class="step2">
+                    <h2>Step Two: Add Some Filters</h2>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, eos sunt sed aperiam tempora repudiandae labore iste commodi rerum facilis voluptas ut explicabo expedita hic eum ratione obcaecati alias vel enim dolorum aspernatur quisquam? Placeat vitae cumque, nisi animi maxime quas tempora veritatis ducimus corporis architecto distinctio tempore dicta soluta pariatur voluptates repudiandae impedit cum voluptate. Culpa sapiente ea consequuntur?</p> -->
+                    <!-- type, age, height, bloom, color -->
+                    <h3>What sort of plants are you looking for?</h3>
+                    <form class="filters">
+                        <label for="type">Plant Type</label>
+                        <select id="type">
+                            <option value="" disabled selected>Select one...</option>
+                            <option value="herb">Herb</option>
+                            <option value="flower">Flower</option>
+                            <option value="tree">Tree</option>
+                        </select>
+                        <label for="lifespan">Lifespan</label>
+                        <select id="lifespan">
+                            <option value="" disabled selected>Select one...</option>
+                            <option value="annual">Annual</option>
+                            <option value="biennial">Biennial</option>
+                            <option value="perennial">Perennial</option>
+                        </select>
+                        <label for="bloom">Bloom Period</label>
+                        <select id="bloom">
+                            <option value="" disabled selected>Select one...</option>
+                            <option value="ESp">Early Spring</option>
+                            <option value="Sp">Mid Spring</option>
+                            <option value="LSp">Late Spring</option>
+                            <option value="ESu">Early Summer</option>
+                            <option value="Su">Mid Summer</option>
+                            <option value="LSu">Late Summer</option>
+                        </select>
+                        <label for="color">Flower Color</label>
+                        <select id="color">
+                            <option value="" disabled selected>Select one...</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="orange">Orange</option>
+                            <option value="purple">Purple</option>
+                        </select>
+                        <button type="submit">Next Step</button>
+                    </form>
+                </div>
+                <div class="step3 selected">
+                    <h2>Step Three: Choose Your Plants!</h2>
+                    <form class="filteredPlants">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="tempPlant1">
+                                <label for="tempPlant1">
+                                    <img src="https://source.unsplash.com/random/50x50">
+                                    <span>Temp Plant</span>
+                                    <span class="binomialName">Tempinus Plantinus</span>
+                                    <span>Tree</span>
+                                    <span>Perennial</span>
+                                    <span>30 feet</span>
+                                    <span>Early Summer</span>
+                                    <span class="color">Yellow</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tempPlant2">
+                                <label for="tempPlant2">
+                                    <img src="https://source.unsplash.com/random/50x50">
+                                    <span>Temp Plant</span>
+                                    <span class="binomialName">Tempinus Plantinus</span>
+                                    <span>Tree</span>
+                                    <span>Perennial</span>
+                                    <span>30 feet</span>
+                                    <span>Early Summer</span>
+                                    <span class="color">Yellow</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tempPlant3">
+                                <label for="tempPlant3">
+                                    <img src="https://source.unsplash.com/random/50x50">
+                                    <span>Temp Plant</span>
+                                    <span class="binomialName">Tempinus Plantinus</span>
+                                    <span>Tree</span>
+                                    <span>Perennial</span>
+                                    <span>30 feet</span>
+                                    <span>Early Summer</span>
+                                    <span class="color">Yellow</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <section class="garden">
+                <h2>My Garden</h2>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; Robert Duhig 2020</p>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./script.js"></script>

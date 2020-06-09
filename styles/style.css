@@ -1,7 +1,10 @@
 /* ~~~~~~~~~~~~~~~~~~~~ SETUP ~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~ */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 h1, h2 {
@@ -10,15 +13,24 @@ h1, h2 {
 
 h1 {
   font-size: 4rem;
-  text-shadow: -2px -2px 0 #2c2c2c, 2px -2px 0 #2c2c2c, -2px 2px 0 #2c2c2c, 2px 2px 0 #2c2c2c;
+  text-shadow: -2px -2px 0 #34344A, 2px -2px 0 #34344A, -2px 2px 0 #34344A, 2px 2px 0 #34344A;
   color: #fafafa;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #009B72;
+}
+
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
 }
 
 a {
   font-size: 1.5rem;
   text-decoration: none;
   color: #fafafa;
-  letter-spacing: 1px;
 }
 
 a:hover, a:active, a:focus {
@@ -26,6 +38,14 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-position: under;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button, select {
+  font-size: 1.2rem;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~ SHARED STYLES ~~~~~~~~~~~~~~~~~~~~ */
@@ -42,7 +62,7 @@ body {
 /* ~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~ */
 header {
   height: clamp(360px, calc(360px + (500 - 360) * (100vw - 850px) / (1280 - 850)), 500px);
-  background: linear-gradient(230deg, transparent calc(60% - 1px), #41a241 calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
+  background: linear-gradient(230deg, transparent calc(60% - 1px), #0C8346 calc(60% + 1px)), url("../assets/young-tomato-5808.jpg") no-repeat right top;
   background-size: auto, cover;
   position: relative;
 }
@@ -62,8 +82,8 @@ header {
 .logo i {
   float: left;
   font-size: 7rem;
-  color: #41a241;
-  text-shadow: -2px -2px 0 #2c2c2c, 2px -2px 0 #2c2c2c, -2px 2px 0 #2c2c2c, 2px 2px 0 #2c2c2c;
+  color: #0C8346;
+  text-shadow: -2px -2px 0 #34344A, 2px -2px 0 #34344A, -2px 2px 0 #34344A, 2px 2px 0 #34344A;
   margin-right: 10px;
 }
 
@@ -78,7 +98,7 @@ header {
 
 nav {
   width: 55%;
-  background-color: #41a241;
+  background-color: #0C8346;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -88,4 +108,170 @@ nav {
 nav li {
   display: inline-block;
   margin-right: clamp(20px, calc(20px + (60 - 20) * (100vw - 850px) / (1280 - 850)), 60px);
+}
+
+.about {
+  position: relative;
+  padding: 60px;
+}
+
+.about img {
+  float: right;
+  height: 150px;
+  margin-left: 60px;
+  -webkit-box-shadow: 20px 20px #FFFD82;
+          box-shadow: 20px 20px #FFFD82;
+}
+
+.about span {
+  font-weight: 600;
+}
+
+.plants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 30px;
+  height: 100%;
+}
+
+.step1, .step2, .step3 {
+  padding: 0 30px;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-radius: 50px;
+}
+
+.step1.selected, .step2.selected, .step3.selected {
+  border-color: #009B72;
+}
+
+.step1, .step2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(50% - 68px);
+          flex: 1 0 calc(50% - 68px);
+}
+
+.step3 {
+  width: 100%;
+}
+
+.sunExposure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 40px;
+}
+
+.sunExposure label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+}
+
+.sunExposure label input {
+  margin-left: 10px;
+}
+
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 20px 40px;
+}
+
+.filters label {
+  width: calc(30% - 20px);
+  text-align: right;
+}
+
+.filters select {
+  width: 70%;
+  margin: 10px;
+}
+
+.filteredPlants {
+  padding: 20px;
+}
+
+.filteredPlants ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filteredPlants li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 20px;
+}
+
+.filteredPlants li:nth-of-type(even) {
+  background-color: #ededed;
+}
+
+.filteredPlants label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(100% - 50px);
+          flex: 1 0 calc(100% - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+.filteredPlants label > img {
+  width: 70px;
+}
+
+.binomialName {
+  font-style: italic;
+}
+
+.garden {
+  padding: 60px;
+}
+
+button {
+  width: 200px;
+  background-color: #009B72;
+  color: #fafafa;
+  border: 1px solid #009B72;
+  padding: 5px 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover, button:focus, button:active {
+  border-color: #34344A;
+}
+
+footer {
+  background-color: #0C8346;
+  color: #fafafa;
+  padding: 1px;
+  text-align: center;
 }

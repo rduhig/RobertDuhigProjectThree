@@ -2,6 +2,9 @@
 
 body {
     font-family: $baseFont;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 h1, h2 {
@@ -14,11 +17,20 @@ h1 {
     color: $backgroundColor;
 }
 
+h2 {
+    font-size: 2.5rem;
+    color: #009B72;
+}
+
+h3 {
+    font-family: $baseFont;
+    font-size: 2rem;
+}
+
 a {
     font-size: 1.5rem;
     text-decoration: none;
     color: $backgroundColor;
-    letter-spacing: 1px;
 
     &:hover, &:active, &:focus {
         color: white;
@@ -26,4 +38,12 @@ a {
         text-decoration-thickness: 2px;
         text-underline-position: under;
     }
+}
+
+p {
+    line-height: 1.5;
+}
+
+button, select {
+    font-size: 1.2rem;
 }
